@@ -42,7 +42,7 @@ module Tumblr
     end
 
     def text(blog_name, options = {})
-      valid_opts = STANDARD_POST_OPTIONS + [:title, :body]
+      valid_opts = STANDARD_POST_OPTIONS + [:title, :body, :source_url]
       validate_options(valid_opts, options)
 
       options[:type] = 'text'
