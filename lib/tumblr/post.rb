@@ -23,7 +23,7 @@ module Tumblr
     end
 
     def photo(blog_name, options = {})
-      valid_opts = STANDARD_POST_OPTIONS + [:caption, :link, :data, :source, :photoset_layout]
+      valid_opts = STANDARD_POST_OPTIONS + [:caption, :link, :data, :source, :photoset_layout, :source_url, :send_to_twitter, :send_to_facebook]
       validate_options(valid_opts, options)
       validate_no_collision options, [:data, :source]
       convert_source_array :source, options
